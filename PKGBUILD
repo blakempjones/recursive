@@ -1,7 +1,7 @@
-pkgname=
-pkgver=
+pkgname=recursive
+pkgver=0.1
 pkgrel=1
-pkgdesc=""
+pkgdesc="Bash script that recursively performs commands on sub-folders and files"
 url="https://github.com/blakempjones/recursive.git"
 license=("GPL3")
 arch=('any')

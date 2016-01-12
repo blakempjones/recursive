@@ -1,15 +1,15 @@
-pkgbase =
-	pkgdesc =
-	pkgver =
-	pkgrel = 1
-	url =
-	arch = any
-	license = GPL3
-	makedepends = git
-	depends = bash
-	optdepends = sudo: install and update packages as non-root
-	optdepends = customizepkg: apply customizepkg modifications
-	source = git+https://github.com/blakempjones/recursive.git
+pkgbase = recursive
+pkgdesc = "Bash script that recursively performs commands on sub-folders and files"
+pkgver = 0.1
+pkgrel = 1
+url = "https://github.com/blakempjones/recursive.git"
+arch = any
+license = GPL3
+makedepends = git
+depends = bash
+optdepends = sudo: install and update packages as non-root
+optdepends = customizepkg: apply customizepkg modifications
+source = git+https://github.com/blakempjones/recursive.git
 
 pkgname = packer
 
