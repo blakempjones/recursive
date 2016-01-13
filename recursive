@@ -1,0 +1,34 @@
+#!/bin/bash
+# Copyright Blake Jones <blakempjones@gmail.com>
+# 			Nelson Ong <contact@nelsonong.com>
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# Echo items in current directory.
+function perform_command() {
+	for file in .* *; do
+		# If it is a file.
+		if [ -f "$file" ]; then
+			echo "File: "$file
+		# If it is a directory.
+		elif [ -d "$file" ] && [ "$file" != "." ] && [ "$file" != ".." ]; then
+			echo "Directory: "$file
+			cd $file
+			perform_command
+			cd ..
+		fi
+	done
+	return 0
+}
+
+perform_command
